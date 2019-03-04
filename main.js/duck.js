@@ -1,24 +1,32 @@
 // movimiento del pato
 
-function duck (width, height, color, x, y) {
-    this.gamearea = gamearea;
-    this.width = width;
-    this.height = height;
-    this.angle = 0;
-    this.speed = 1;
-    this.x = x;
-    this.y = y; 
-    this.update = function() {
-      ctx = myGameArea.context;
-      ctx.save();
-      ctx.translate(this.x, this.y); 
-      ctx.rotate(this.angle);
-      ctx.fillStyle = color;
-      ctx.fillRect(this.width / -2, this.height / -2, this.width, this.height); 
-      ctx.restore(); 
-    }
-    this.newPos = function() {
-      this.x += this.speed * Math.sin(this.angle);
-      this.y -= this.speed * Math.cos(this.angle);
-    }
+var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+
+var duck = {
+  x: 100,
+  y: 100,
+  speedX: 0,
+  speedY: 0,
+  img: new Image(),
+  draw: function() {
+    this.img.src = "./imagenes/duck.jpeg";
+    ctx.drawImage(this.img, this.x, this.y, 25, 20);
   }
+};
+
+function update() {
+  ctx.clearRect(0,0, canvas.width, canvas.height);
+  duck.draw();
+  duck.x += duck.speedX;
+  duck.y += duck.speedY;
+
+  if (duck.y + duck.speedY > canvas.height || duck.y + duck.speedY < 0) {
+    duck.speedY *= -1;
+  }
+
+  if (duck.x + duck.speedX > canvas.width || duck.x + duck.speedX < 0) {
+    duck.speedX *= -1;
+  }
+}
+

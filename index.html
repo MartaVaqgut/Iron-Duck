@@ -10,26 +10,17 @@
 </head>
 
 <body>
-  <div>
-    <div>
-      <img src="./imagenes/tree.png" alt="tree" style="">
-    <div>
-      <img src="./imagenes/duck.jpeg" alt="duck" style="">
+    <canvas id="canvas"></canvas>
+    <div class="grass"></div>
 
-      <div>
-          <img src="./imagenes/hunt.png" alt="hunt" style="">
-      </div>
-
-    </div>
-    </div>
-
-    <img src="./imagenes/back.png" alt="background" style ="">
-    <br>
-    <button id="start-button">StartGame</button>
-    <div id="game-board"></div>
+  <div class="controls">
+    <input class="speed-input" value="2" type="number"></input>
+    <button id="start-button" onclick="startGame()">StartGame</button>
   </div>
   
-  <canvas id="canvas"></canvas>
+  <script src= "./main.js/duck.js"></script>
+  <script src= "./main.js/hunt.js"></script>
+  <script src= "./main.js/game.js"></script>
 </body>
 
 </html>
