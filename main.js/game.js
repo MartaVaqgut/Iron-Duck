@@ -12,3 +12,12 @@ function startGame() {
 
     // Pinta los punteros
 }
+
+//llamada al hunt
+function updateGameArea() {
+    myGameArea.clear();
+    player.update();
+}
+
+
+

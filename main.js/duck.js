@@ -10,7 +10,7 @@ var duck = {
   speedY: 0,
   img: new Image(),
   draw: function() {
-    this.img.src = "./imagenes/duck.jpeg";
+    this.img.src = "./imagenes/patito.png";
     ctx.drawImage(this.img, this.x, this.y, 25, 20);
   }
 };
