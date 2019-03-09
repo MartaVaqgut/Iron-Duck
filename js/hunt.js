@@ -12,13 +12,11 @@ function hunt (ctx,canvas) {
     this.img=new Image();
     this.img.src = "./imagenes/hunt.png";
 };
-
 hunt.prototype.draw=function () {
+  this.img.onload = function() {
     this.ctx.drawImage(this.img, this.x, this.y, 25, 20);
+  }.bind(this)
 }
-
-
-
 
 Function updateTwo(){
   hunt.draw();
