@@ -2,7 +2,7 @@
 
 function Game(canvas){
   this.canvas = document.getElementById(canvas);
-  this.ctx = this.canvas.getContext ('2d');
+  this.ctx = this.canvas.getContext('2d');
   this.canvas.width = 1024;
   this.canvas.height = 768;
   this.reset();
@@ -15,7 +15,7 @@ Game.prototype.clear = function (){
 
 Game.prototype.start = function (){
   this.clear();
-  this.moveAll();
+  this.move();
   this.draw();
 }
 
@@ -38,4 +38,17 @@ Game.prototype.move = function(){
 }
 
 
+function startGame() {
+  // Obtine velocidad inicial para comenzar a jugar
+  var inputSpeed = document.querySelector('.speed-input').value
+  var game = new Game("canvas");
+  var duck = new Duck(game);
 
+  // array = new Array[1000]
+  // // Aplica velocidad al pato y lo inicia
+  // arrayforech.
+  //   duck.speedX = parseInt(inputSpeed)
+  //   duck.speedY = parseInt(inputSpeed/2)
+  //   duck.move();
+  //   duck.draw();
+}
