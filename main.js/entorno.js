@@ -2,15 +2,7 @@
 
 var x=200, y=400;//coordenadas iniciales de la imagen
 
-function lienzo(){
 
-var c=document.getElementById(“Canvas”);
-var ctx=c.getContext(“2d”);
-var img=document.getElementById(“ima”);
-ctx.clearRect(0,0,500,500);//limpia todo el canvas 
-ctx.drawImage(img,x,y);//dibuja la imagen
-
-}
 
 //cuando presiona una tecla
 function whichButton(event){

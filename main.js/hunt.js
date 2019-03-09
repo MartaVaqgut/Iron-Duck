@@ -1,36 +1,51 @@
 
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+// var canvas = document.getElementById('canvas');
+// var ctx = canvas.getContext('2d');
 
-var hunt = {
-  x: 60,
-  y: 60,
-  speedX: 0,
-  speedY: 0,
-  img: new Image(),
-  draw: function() {
+function hunt (ctx,canvas) {
+    this.ctx=ctx;
+    this.canvas=canvas;
+    this.x= 60;
+    this.y= 60;
+    this.speedX= 0;
+    this.speedY= 0;
+    this.img=new Image();
     this.img.src = "./imagenes/hunt.png";
-    ctx.drawImage(this.img, this.x+speedX, this.y, 25, 20);
-  }
 };
 
+hunt.prototype.draw=function () {
+    this.ctx.drawImage(this.img, this.x, this.y, 25, 20);
+}
 
+
+
+
+Function updateTwo(){
+  hunt.draw();
+  if (hunt.y + hunt.speedY > canvas.height || hunt.y + hunt.speedY < 0) {
+    duck.speedY *= -1;
+  }
+ 
+  if (hunt.x + hunt.speedX > canvas.width || hunt.x + hunt.speedX < 0) {
+    hunt.speedX *= -1;
+  }
+}
 
 
 function moveUp() {
-    player.speedY -= 1;
+  player.speedY -= 1;
 }
 
 function moveDown() {
-    player.speedY += 1;
+  player.speedY += 1;
 }
 
 function moveLeft() {
-    player.speedX -= 1;
+  player.speedX -= 1;
 }
 
 function moveRight() {
-    player.speedX += 1;
+  player.speedX += 1;
 }
 
 document.onkeydown = function(e) {
