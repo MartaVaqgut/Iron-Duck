@@ -1,5 +1,5 @@
 
-
+//carga el canvas
 function Game(canvas){
   this.canvas = document.getElementById(canvas);
   this.ctx = this.canvas.getContext('2d');
@@ -12,14 +12,14 @@ function Game(canvas){
 Game.prototype.clear = function (){
   this.ctx.clearRect (0, 0, this.canvas.width, this.canvas.height);
 };
-
+//empieza el canvas
 Game.prototype.start = function (){
   this.clear();
   this.move();
   this.draw();
   
 }
-
+//carga los jugadores y pato
 Game.prototype.reset = function (){
   this.duck = new Duck(this);
   this.hunt1 = new Hunt(this,0);
@@ -27,6 +27,7 @@ Game.prototype.reset = function (){
   this.background = new Background(this)
 }
  
+//
 Game.prototype.draw = function (){
   this.duck.draw();
   this.background.draw();

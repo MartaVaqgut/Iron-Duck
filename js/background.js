@@ -7,15 +7,11 @@ function Background(game) {
     this.y = 0;
   }
   
+//pintar el background
 Background.prototype.draw = function() {
     this.bgWidth = this.game.canvas.width;
     this.game.ctx.drawImage(this.img, this.x, this.y, this.bgWidth , this.game.canvas.height);
 };
   
-// Background.prototype.move = function() {
-//     this.vx = this.game.vBg;
-    
-//     this.x -= this.vx;
-//     if (this.x < -this.game.canvas.width) this.x = 0;
-// };
+
 
