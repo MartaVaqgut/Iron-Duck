@@ -1,6 +1,5 @@
 window.onload = function() {
     var game = new Game("canvas");
-
-    game.start();
+    var interval = setInterval(game.start.bind(game), 1000/60);
 }
 

@@ -5,7 +5,7 @@ canvas {
 	border: 1px solid black;
 }
 
-.grass {
+/* .grass {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -15,7 +15,7 @@ canvas {
 	background-repeat: no-repeat;
 	background-size: cover;
 	pointer-events: none;
-}
+} */
 
 .controls {
 	position: absolute;
