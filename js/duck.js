@@ -5,6 +5,8 @@ function Duck(newGame) {
   this.ctx= newGame.ctx;
   this.x= 100;
   this.y= 100;
+  this.width=100;
+  this.height=100;
   this.vx=3;
   this.vy=7;
   this.radius=100;
@@ -16,7 +18,7 @@ function Duck(newGame) {
 
 //pinta el pato
 Duck.prototype.draw=function () {
-  this.ctx.drawImage(this.img, this.x, this.y, 100, 100);
+  this.ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
 }
 
 //mueve al pato
