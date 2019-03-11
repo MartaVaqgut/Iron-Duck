@@ -10,10 +10,25 @@
 </head>
 
 <body>
+    
     <canvas id="canvas"></canvas>
     <div class="grass"></div>
   
+    <div id="header" class="header"><h1>Duck Hunt <br/><small>Tiro al pato by Ironhack!</small></h1></div>
+    
+    
+    <div id="levelCreate" class="levelCreator"><br/>
+    <strong>Level Creator:</strong><br/>
+    Waves: <input id="LCwaves" name="LCwaves" size="3" type="text" value="1"/> &nbsp; &nbsp; Starting Ducks: <input name="LCducks" id="LCducks" size="3" type="text" value="2"/> &nbsp; &nbsp; Starting Bullets: <input type="text" name="LCbullets" id="LCbullets" size="3" value="4"/> &nbsp; &nbsp; Wave Time (sec): <input type="text" name="LCwavetime" id="LCwavetime" size="3" value="10"/> &nbsp; &nbsp; Difficulty: <input type="text" name="LCdif" id="LCdif" size="3" value="5"/>
+    <div id="doit" class="doit"></div>
+    <br/><br/>
+    <small> Wave time is the amount of time before the ducks fly away.  Difficulty is rated from 1-10 and controls the speed of the ducks.  Anything over 8 is kind of ridiculous. The bullet and duck counters have a maximum size- you will receive everything you configure but they may not all display if the number of bullets or ducks is too high.</small>
+    </div>
+    
+    <div id="info"></div>
+    
 
+    
 
   <script src= "./js/duck.js"></script>
   <script src= "./js/hunt.js"></script>

@@ -51,7 +51,7 @@ Hunt.prototype.movedown =  function(){
     this.speedY = 0;
   }
 
-  // disparos al pato
+  // colisiones al pato
   Hunt.prototype.shoot = function(duck){
     if (this.x>= duck.x-duck.width && this.y>= duck.y - duck.height){
       duck.x=20;
@@ -60,7 +60,7 @@ Hunt.prototype.movedown =  function(){
     } else if (this.y<=duck.height && this.x<= duck.x - duck.width){
       duck.x=20;
       duck.y=20;
-      console.log("marta2")
+      console.log("marta2") 
     }
   }
 

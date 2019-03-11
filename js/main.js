@@ -32,7 +32,7 @@ window.onload = function() {
         }    
     }
     
-
+    //cada cuanto pinta el pato
     var interval = setInterval(game.start.bind(game), 1000/60);
 
 

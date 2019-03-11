@@ -3,6 +3,7 @@
 /* My styles */
 canvas {
 	border: 1px solid black;
+	new-image: url("./imagenes/tree.png")
 }
 
 /* .grass {
@@ -21,4 +22,14 @@ canvas {
 	position: absolute;
 	top: 0;
 	left: 1024px;
+}
+
+.tree{
+	position:absolute;
+	background:url(imagenes/tree.png) top left no-repeat;
+	left:70px;
+	bottom:100px;	
+	width:173px;
+	height:260px;
+	z-index:4;
 }
