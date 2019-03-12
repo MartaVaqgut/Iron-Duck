@@ -3,6 +3,7 @@ function Hunt (game, player){
     this.game=game;
     this.x= 300 + 400 * player;
     this.y= 300;
+    this.counter = 0
     this.speedX= 0;
     this.speedY= 0;
     this.height = 80;
@@ -58,7 +59,7 @@ Hunt.prototype.movedown =  function(){
         duck.y=20;
         duck.vx=3;
         duck.vy=7;
-        console.log("marta")
+        this.counter = counter + 1
       }
     // if (this.x<= duck.x+duck.width && this.y>= duck.y - duck.height){
     //   duck.x=20;
