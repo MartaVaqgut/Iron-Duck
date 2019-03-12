@@ -10,8 +10,8 @@ function Duck(newGame) {
   this.vx=3;
   this.vy=7;
   this.radius=100;
-  this.speedX= 1;
-  this.speedY= 1;
+  //this.speedX= 1;
+  //this.speedY= 1;
   this.img=new Image();
   this.img.src = "./imagenes/patito.png";
 }

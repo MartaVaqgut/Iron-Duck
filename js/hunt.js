@@ -53,16 +53,27 @@ Hunt.prototype.movedown =  function(){
 
   // colisiones al pato
   Hunt.prototype.shoot = function(duck){
-    if (this.x>= duck.x-duck.width && this.y>= duck.y - duck.height){
-      duck.x=20;
-      duck.y=20;
-      console.log("marta")
-    } else if (this.y<=duck.height && this.x<= duck.x - duck.width){
-      duck.x=20;
-      duck.y=20;
-      console.log("marta2") 
-    }
+    if (this.x + this.width >= duck.x && duck.x + duck.width >= this.x && this.y + this.height >= duck.y && duck.y + duck.height >= this.y){
+        duck.x=20;
+        duck.y=20;
+        duck.vx=3;
+        duck.vy=7;
+        console.log("marta")
+      }
+    // if (this.x<= duck.x+duck.width && this.y>= duck.y - duck.height){
+    //   duck.x=20;
+    //   duck.y=20;
+    //   console.log("marta")
+    // } else if (this.y<=duck.height && this.x<= duck.x - duck.width){
+    //   duck.x=20;
+    //   duck.y=20;
+    //   console.log("marta2") 
+    // } 
   }
 
-  
-
+  //   if (this.x + duck.width >= this.x && this.y + duck.height >= this.y && this.x + duck.width < this.x + duck.width) {
+  //     duck.x=20;
+  //     duck.y=20;
+  //     console.log("marta")
+  //   }
+  // }
