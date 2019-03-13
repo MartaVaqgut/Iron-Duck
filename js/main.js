@@ -1,5 +1,8 @@
 window.onload = function() {
     var game = new Game("canvas");
+    var audio = document.getElementById("audio");
+    //audio.play();
+
 
     //eventos de las teclas
     document.onkeydown = function(event) {
@@ -36,6 +39,6 @@ window.onload = function() {
     var interval = setInterval(game.start.bind(game), 1000/60);
 
 
-
+    
 };
 

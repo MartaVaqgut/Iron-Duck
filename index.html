@@ -10,12 +10,21 @@
 </head>
 
 <body>
-    <button 
+    
+    <div class="controls">
+      <input class="counter" value="0" type="number"> COUNTER 1</input>
+      <input class="counter" value="0" type="number"> COUNTER 2</input>
+    </div>	 
+      
+    
+
     <canvas id="canvas"></canvas>
     <div class="grass"></div>
   
     <div id="header" class="header"><h1>Duck Hunt <br/><small>Tiro al pato by Ironhack!</small></h1></div>
     
+
+    <button id="start-button" onclick="startGame()">StartGame</button>
     
     <div id="levelCreate" class="levelCreator"><br/>
     <strong>Level Creator:</strong><br/>
@@ -27,10 +36,9 @@
     
     <div id="info"></div>
     
-    <audio class="sounds" id="gunSound" preload="auto">
-        <source type="audio/ogg" src="audio/quacking.mp3"/>
+    <audio id="audio" controls>
+      <source type="audio/ogg" src="audio/quacking.mp3">
     </audio>
-    
 
   <script src= "./js/duck.js"></script>
   <script src= "./js/hunt.js"></script>

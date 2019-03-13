@@ -3,6 +3,7 @@ function Hunt (game, player){
     this.game=game;
     this.x= 300 + 400 * player;
     this.y= 300;
+    this.counter = 0
     this.speedX= 0;
     this.speedY= 0;
     this.height = 80;
@@ -58,9 +59,19 @@ Hunt.prototype.movedown =  function(){
         duck.y=20;
         duck.vx=3;
         duck.vy=7;
-        console.log("marta")
+        var counterInput = document.querySelector(".counter")
+        this.counter++;
+        counterInput.value = this.counter;
       }
-    // if (this.x<= duck.x+duck.width && this.y>= duck.y - duck.height){
+
+  }
+
+
+
+
+
+
+  // if (this.x<= duck.x+duck.width && this.y>= duck.y - duck.height){
     //   duck.x=20;
     //   duck.y=20;
     //   console.log("marta")
@@ -69,7 +80,6 @@ Hunt.prototype.movedown =  function(){
     //   duck.y=20;
     //   console.log("marta2") 
     // } 
-  }
 
   //   if (this.x + duck.width >= this.x && this.y + duck.height >= this.y && this.x + duck.width < this.x + duck.width) {
   //     duck.x=20;

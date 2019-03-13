@@ -33,3 +33,7 @@ canvas {
 	height:260px;
 	z-index:4;
 }
+
+#audio{
+	display: none
+	}
