@@ -3,7 +3,7 @@ function Hunt (game, player){
     this.game=game;
     this.x= 300 + 400 * player;
     this.y= 300;
-    this.counter = 0
+    this.counter = 0;
     this.speedX= 0;
     this.speedY= 0;
     this.height = 80;

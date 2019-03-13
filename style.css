@@ -3,7 +3,7 @@
 /* My styles */
 canvas {
 	border: 1px solid black;
-	new-image: url("./imagenes/tree.png")
+	/* new-image: url("./imagenes/tree.png") */
 }
 
 /* .grass {
@@ -21,7 +21,7 @@ canvas {
 .controls {
 	position: absolute;
 	top: 0;
-	left: 1024px;
+	left: 1030px;
 }
 
 .tree{
@@ -36,4 +36,4 @@ canvas {
 
 #audio{
 	display: none
-	}
+}
