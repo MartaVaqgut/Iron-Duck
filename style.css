@@ -6,17 +6,6 @@ canvas {
 	/* new-image: url("./imagenes/tree.png") */
 }
 
-/* .grass {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 1024px;
-	height: 768px;
-	background-image: url("./imagenes/back.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	pointer-events: none;
-} */
 
 .controls {
 	position: absolute;
@@ -35,5 +24,10 @@ canvas {
 }
 
 #audio{
-	display: none
+	/* display: none */
+}
+
+header{
+
+
 }

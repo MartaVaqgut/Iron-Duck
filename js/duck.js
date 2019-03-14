@@ -10,14 +10,14 @@ function Duck(newGame) {
   this.vx=3;
   this.vy=7;
   this.radius=100;
-  //this.speedX= 1;
-  //this.speedY= 1;
   this.img=new Image();
   this.img.src = "./imagenes/patito.png";
 }
 
 //pinta el pato
 Duck.prototype.draw=function () {
+  // this.ctx.fillStyle = "blue";
+  // this.ctx.fillRect (0, 0, this.newGame.Width, this.newGame.height);
   this.ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
 }
 

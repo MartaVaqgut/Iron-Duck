@@ -10,6 +10,7 @@ function Hunt (game, player){
     this.width=80;
     this.img=new Image(); 
     this.img.src = "./imagenes/hunt"+player+".png";
+  
 };
 
 //limitar los hunters al canvas
@@ -52,16 +53,28 @@ Hunt.prototype.movedown =  function(){
     this.speedY = 0;
   }
 
-  // colisiones al pato
-  Hunt.prototype.shoot = function(duck){
+  // disparo del pato === colisiones
+  Hunt.prototype.shoot = function(duck,n){
     if (this.x + this.width >= duck.x && duck.x + duck.width >= this.x && this.y + this.height >= duck.y && duck.y + duck.height >= this.y){
         duck.x=20;
         duck.y=20;
         duck.vx=3;
         duck.vy=7;
-        var counterInput = document.querySelector(".counter")
+
+  //countador del pago
+        var counterInput = document.querySelector(".counter"+ n)
         this.counter++;
         counterInput.value = this.counter;
+
+  // audio cuando disparas al pato
+        var audio = new Audio("./audio/quacking.mp3"); 
+        audio.play();
+
+  //alert game over
+        if (this.counter >= 10){
+          alert("GAME OVER");
+        document.location.reload();
+        }
       }
 
   }
@@ -69,21 +82,3 @@ Hunt.prototype.movedown =  function(){
 
 
 
-
-
-  // if (this.x<= duck.x+duck.width && this.y>= duck.y - duck.height){
-    //   duck.x=20;
-    //   duck.y=20;
-    //   console.log("marta")
-    // } else if (this.y<=duck.height && this.x<= duck.x - duck.width){
-    //   duck.x=20;
-    //   duck.y=20;
-    //   console.log("marta2") 
-    // } 
-
-  //   if (this.x + duck.width >= this.x && this.y + duck.height >= this.y && this.x + duck.width < this.x + duck.width) {
-  //     duck.x=20;
-  //     duck.y=20;
-  //     console.log("marta")
-  //   }
-  // }

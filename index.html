@@ -11,17 +11,16 @@
 
 <body>
     
-    <div class="controls">
-      <input class="counter" value="0" type="number"> HUNTER BLUE</input>
-      <input class="counter" value="0" type="number"> HUNTER RED</input>
-    </div>	 
-      
-    
-
-    <canvas id="canvas"></canvas>
-    <div class="grass"></div>
-  
     <div id="header" class="header"><h1>Duck Hunt <br/><small>Tiro al pato by Ironhack!</small></h1></div>
+
+    <canvas id="canvas" ></canvas>
+  
+
+    <div class="controls">
+      <input class="counter1" value="0" type="number"> HUNTER BLUE</input>
+      <input class="counter2" value="0" type="number"> HUNTER RED</input>
+    </div>
+  
     
 
     <button id="start-button" onclick="startGame()">StartGame</button>
@@ -31,13 +30,17 @@
     Waves: <input id="LCwaves" name="LCwaves" size="3" type="text" value="1"/> &nbsp; &nbsp; Starting Ducks: <input name="LCducks" id="LCducks" size="3" type="text" value="2"/> &nbsp; &nbsp; Starting Hunts: <input type="text" name="LCbullets" id="LCbullets" size="3" value="4"/> &nbsp; &nbsp; Wave Time (sec): <input type="text" name="LCwavetime" id="LCwavetime" size="3" value="10"/> &nbsp; &nbsp; Difficulty: <input type="text" name="LCdif" id="LCdif" size="3" value="5"/>
     <div id="doit" class="doit"></div>
     <br/><br/>
-    <small> Wave time is the amount of time before the ducks fly away.  Difficulty is rated from 1-10 and controls the speed of the ducks.  Anything over 8 is kind of ridiculous. The bullet and duck counters have a maximum size- you will receive everything you configure but they may not all display if the number of bullets or ducks is too high.</small>
+    <small> The game runs when you reload the page.<br/>
+      <strong>Player 1</strong> (blue shoot) moves with the arrows and shoots with the shift.<br/>
+      <strong>Player 2</strong> (red shoot) moves with the keys a, s, d, w and shoots with the r
+      When you kill the duck (the pointer and the duck coincide) you score on the hunter.<br/>
+      At 10 points on the hunter, a warning of <strong>'GAME OVER'</strong></small>
     </div>
     
     <div id="info"></div>
     
     <audio id="audio" controls>
-      <source type="audio/ogg" src="audio/quacking.mp3">
+      <source type="audio/mpeg" src="./audio/audiogame.mp3">
     </audio>
 
     <!-- <div class="alert">

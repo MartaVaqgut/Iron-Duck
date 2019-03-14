@@ -24,7 +24,8 @@ Game.prototype.reset = function (){
   this.duck = new Duck(this);
   this.hunt1 = new Hunt(this,0);
   this.hunt2 = new Hunt(this,1);
-  this.background = new Background(this)
+  this.background = new Background(this);
+  
 }
  
 //

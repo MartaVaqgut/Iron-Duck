@@ -1,7 +1,7 @@
 window.onload = function() {
     var game = new Game("canvas");
-    var audio = document.getElementById("audio");
-    //audio.play();
+    // var audio = document.getElementById("audio");
+    // audio.play();
 
 
     //eventos de las teclas
@@ -12,13 +12,13 @@ window.onload = function() {
             case 68: game.hunt2.moveRight(); break;
             case 87: game.hunt2.moveup(); break; 
             case 83: game.hunt2.movedown(); break;
-            case 82: game.hunt2.shoot(game.duck); break;
+            case 82: game.hunt2.shoot(game.duck, 2); break;
              //jugador 1 puntero rojo
             case 37: game.hunt1.moveLeft(); break;
             case 39: game.hunt1.moveRight(); break;
             case 38: game.hunt1.moveup(); break; 
             case 40: game.hunt1.movedown(); break;
-            case 16: game.hunt1.shoot(game.duck); break;
+            case 16: game.hunt1.shoot(game.duck, 1); break;
         }
     }
     //para los eventos de las teclas
