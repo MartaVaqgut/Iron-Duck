@@ -5,7 +5,7 @@ function Background(game) {
     this.img.src = './imagenes/back.png';  
     this.x = 0;
     this.y = 0;
-    //this.img.src = './imagenes/tree.png';
+
   }
   
 //pintar el background

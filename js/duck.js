@@ -1,5 +1,4 @@
 //Pintar el pato
-
 function Duck(newGame) {
   this.newGame = newGame;
   this.ctx= newGame.ctx;
@@ -16,8 +15,6 @@ function Duck(newGame) {
 
 //pinta el pato
 Duck.prototype.draw=function () {
-  // this.ctx.fillStyle = "blue";
-  // this.ctx.fillRect (0, 0, this.newGame.Width, this.newGame.height);
   this.ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
 }
 
